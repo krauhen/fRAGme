@@ -1,10 +1,10 @@
 .. _environment:
 
 Environment
-============
+===========
 
 Variables
---------------
+---------
 
 .. list-table:: Environment Variables
    :widths: 25 25 50

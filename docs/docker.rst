@@ -1,7 +1,7 @@
 .. _docker:
 
 Docker
-============
+======
 
 From dockerhub
 --------------
@@ -25,7 +25,7 @@ From dockerhub
   :alt: Screenshot of active docker webservice.
 
 From source
---------------
+-----------
 
 .. code-block:: bash
 
@@ -36,13 +36,13 @@ From source
     docker-compose up
 
 OpenApiSpec(OAS)
--------------
+----------------
 .. image:: _static/images/fastapi_docs.png
   :width: 1200
   :alt: OpenAPISpec(OAS).
 
 ReDoc
--------------
+-----
 .. image:: _static/images/fastapi_redoc.png
   :width: 1200
   :alt: ReDoc.
