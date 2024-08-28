@@ -29,7 +29,8 @@ jobs:
           IMAGE_NAME: fragme
         run: |
           docker-compose build
-          docker tag ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
+          docker image ls
+          docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
 
       - name: Push the Docker image
         run: |
