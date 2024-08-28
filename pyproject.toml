@@ -1,0 +1,30 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "fRAGme"
+authors = [{name = "Henning Krause", email = "henning.krause90@gmail.com"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires-python = ">=3.10.6"
+dynamic = ["version", "description"]
+
+dependencies = [
+    "fastapi",
+    "langchain-openai",
+    "langchain-chroma",
+    "langchain-community",
+    "python-multipart",
+    "pypdf"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+]
+
+[tool.black]
+line-length = 88
+exclude = '\.git|\.hg|\.mypy_cache|\.tox|\.venv|_build|buck-out|build|dist|venv'

@@ -1,0 +1,14 @@
+services:
+  fragme:
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${PORT}/"]
+    container_name: fragme
+    hostname: fragme
+    image: fragme
+    ipc: host
+    restart: always
+    ports:
+      - ${PORT}:${PORT}
+    build: .
+    env_file:
+      - .env

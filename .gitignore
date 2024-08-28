@@ -1,3 +1,8 @@
+data/*
+data/tmp/*
+!data/.gitkeep
+!data/tmp
+!data/tmp/.gitkeep
 .idea
 
 # Created by .ignore support plugin (hsz.mobi)
