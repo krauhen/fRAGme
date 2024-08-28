@@ -32,4 +32,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        repository: krauhen/fRAGme.github.io
         publish_dir: docs/_build
+        publish_branch: gh-pages
