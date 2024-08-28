@@ -4,9 +4,16 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "fRAGme"
-authors = [{name = "Henning Krause", email = "henning.krause90@gmail.com"}]
-license = {file = "LICENSE"}
-classifiers = ["License :: OSI Approved :: MIT License"]
+readme = "README.md"
+authors = [{ name = "Henning Krause", email = "henning.krause90@gmail.com" }]
+maintainers = [{ name = "Henning Krause", email = "henning.krause90@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["rag"]
 requires-python = ">=3.10.6"
 dynamic = ["version", "description"]
 
