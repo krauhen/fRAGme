@@ -24,18 +24,6 @@ jobs:
               docs-folder: "docs/"
               pre-build-command: "pip3 install ."
               build-command: "sphinx-build -b html . _build -W"
-          - name: Commit Files
-            run: |
-              cd docs/_build
-              git config --global user.email "github-actions[bot]@users.noreply.github.com"
-              git config --global user.name "github-actions[bot]"
-              git add .
-              git commit -m "update documentation ${{ github.event.release.tag_name }}"
-          - name: Tag
-            run: |
-              cd docs/_build
-              git tag -a "${{ github.event.release.tag_name }}" -m "${{ github.event.release.name}}"
-            if: github.event_name == 'release'
           - name: Push Changes
             uses: ad-m/github-push-action@master
             with:
