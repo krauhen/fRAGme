@@ -92,5 +92,5 @@ intersphinx_mapping = {
 suppress_warnings = ["myst.header", "config.cache"]
 
 # base URL for sphinx_sitemap
-html_baseurl = "https://fRAGme.github.io/"
+html_baseurl = "https://krauhen.github.io/fRAGme/"
 sitemap_url_scheme = "{link}"
