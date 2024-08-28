@@ -36,6 +36,10 @@ dev = [
 
 [project.urls]
 Homepage = "https://github.com/krauhen/fRAGme"
+Releases = "https://github.com/krauhen/fRAGme/releases"
+CI = "https://github.com/krauhen/fRAGme"
+Documentation = "https://krauhen.github.io/fRAGme/"
+Issue = "https://github.com/krauhen/fRAGme/issues"
 
 [tool.black]
 line-length = 88
