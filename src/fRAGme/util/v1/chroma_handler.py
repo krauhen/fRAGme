@@ -52,8 +52,7 @@ def add_texts(texts: List[Text], identifier: str):
 def add_pdfs(identifier: str, pdfs):
     documents = list()
     for pdf in pdfs:
-        data_path = os.getenv("DATA_PATH")
-        file_path = os.path.join(data_path, "tmp", pdf.filename)
+        file_path = os.path.join("/tmp", pdf.filename)
         with open(file_path, "wb") as f:
             f.write(pdf.file.read())
 

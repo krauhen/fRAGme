@@ -30,7 +30,8 @@ dependencies = [
 dev = [
     "pytest",
     "black",
-    "flit"
+    "flit",
+    "pylint",
 ]
 
 [tool.black]
