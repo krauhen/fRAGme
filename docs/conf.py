@@ -13,9 +13,9 @@ from fRAGme import __version__ as fRAGme_version
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'fRAGme'
-copyright = '2024, Henning Krause'
-author = 'Henning Krause'
+project = "fRAGme"
+copyright = "2024, Henning Krause"
+author = "Henning Krause"
 
 release = fRAGme_version
 version = fRAGme_version
@@ -54,15 +54,22 @@ def skip_property_member(app, what, name, obj, skip, options):
 def setup(app):
     app.connect("autodoc-skip-member", skip_property_member)
 
-templates_path = ['_templates']
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "README.md", "**.ipynb_checkpoints"]
+
+templates_path = ["_templates"]
+exclude_patterns = [
+    "_build",
+    "Thumbs.db",
+    ".DS_Store",
+    "README.md",
+    "**.ipynb_checkpoints",
+]
 
 autosummary_generate = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 html_logo = "_static/logo.png"
 html_favicon = "_static/favicon.png"
