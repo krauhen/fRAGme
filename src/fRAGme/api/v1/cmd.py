@@ -12,12 +12,14 @@ def cmd_ask_question(request: Question, identifier: str):
         prompt = build_question(request, identifier)
         client = OpenAI()
 
-        chat_history = [{"role": element.role, "content": element.content} for element in request.chat_history]
+        chat_history = [
+            {"role": element.role, "content": element.content}
+            for element in request.chat_history
+        ]
         chat_history.append({"role": RoleEnum.user, "content": prompt})
 
         completion = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=chat_history
+            model="gpt-4o-mini", messages=chat_history
         )
 
         answer = completion.choices[0].message

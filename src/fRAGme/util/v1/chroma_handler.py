@@ -82,7 +82,7 @@ def get_texts(identifier: str, ids: List[str] = None):
 
     elements = dict()
     for id_, text, metadata in zip(
-            documents["ids"], documents["documents"], documents["metadatas"]
+        documents["ids"], documents["documents"], documents["metadatas"]
     ):
         elements[id_] = dict()
         elements[id_]["text"] = text
@@ -163,7 +163,9 @@ def build_question(data: Question, identifier: str):
     # Add k snippets
     template += f"Info-Snippets:\n"
     vector_store = get_vector_store(identifier)
-    snippets = vector_store.similarity_search(data.question, k=data.k_similar_text_snippets)
+    snippets = vector_store.similarity_search(
+        data.question, k=data.k_similar_text_snippets
+    )
     for snippet in snippets:
         template += f"Text: {snippet.page_content}\n"
         template += f"Metadata: {snippet.metadata}"
