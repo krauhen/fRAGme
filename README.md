@@ -1,5 +1,4 @@
-# fRAGme 
-### This is a dockerized RAG FastAPI service with vector store handling.
+This is a dockerized RAG FastAPI service with vector store handling.
 
 ## Setup
 ### Start FastAPI webservice
@@ -12,6 +11,8 @@ $ source venv/bin/activate
 (venv)$ export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
 (venv)$ uvicorn src.fRAGme.app:app --host 0.0.0.0 --port 8080
 ```
+![image](https://github.com/user-attachments/assets/a3c75051-14cf-4d39-a040-0066857d0121)
+
 
 ### Start docker
 ```shell
@@ -23,6 +24,8 @@ Replace OPENAI_API_KEY in ".env" file with your OpenAI API-Key.
 (venv)$ docker-compose build
 (venv)$ docker-compose up
 ```
+![image](https://github.com/user-attachments/assets/3eca16fc-66b9-4ac4-9053-f571d8234c98)
+
 #### Environment variables (see .env)
 | Variable       | Default Value |
 |----------------|---------------|
