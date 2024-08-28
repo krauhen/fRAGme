@@ -28,7 +28,7 @@ jobs:
     - name: Build documentation
       run: |
         cd docs
-        sphinx-build . _build/ -W --keep-going --write-all
+        sphinx-build . _build/ -vv -W --keep-going --write-all
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
