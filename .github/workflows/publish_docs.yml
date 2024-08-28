@@ -26,9 +26,7 @@ jobs:
         pip install -r docs/requirements.txt
 
     - name: Build documentation
-      run: |
-        cd docs
-        sphinx-build . _build/ -W --keep-going --write-all
+      run: sphinx-build docs docs/_build/ -W --keep-going --write-all
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
