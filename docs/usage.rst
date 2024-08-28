@@ -4,7 +4,7 @@ Usage
 ============
 
 Use as package from cli
--------------
+-----------------------
 
 .. code-block:: bash
 
@@ -19,13 +19,15 @@ Use as package from cli
   :alt: Screenshot of active webservice.
 
 OpenApiSpec(OAS)
--------------
+----------------
+
 .. image:: _static/images/fastapi_docs.png
   :width: 1200
   :alt: OpenAPISpec(OAS).
 
 ReDoc
--------------
+-----
+
 .. image:: _static/images/fastapi_redoc.png
   :width: 1200
   :alt: ReDoc.
