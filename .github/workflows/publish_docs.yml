@@ -22,8 +22,8 @@ jobs:
             uses: krauhen/sphinx-action@master
             with:
               docs-folder: "docs/"
-              pre-build-command: "pip3 install ."
-              build-command: "sphinx-build -b html . _build -W"
+              pre-build-command: "pip install -r requirements.txt"
+              build-command: "sphinx-build . _build/ -W --keep-going --write-all"
           - name: Push Changes
             uses: ad-m/github-push-action@master
             with:
