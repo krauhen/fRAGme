@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.10.6' 
+        python-version: '3.10.6'
 
     - name: Install dependencies
       run: |
@@ -28,7 +28,7 @@ jobs:
     - name: Build documentation
       run: |
         cd docs
-        sphinx-build . _build/ -vv -W --keep-going --write-all
+        sphinx-build . _build/ -W --keep-going --write-all
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
