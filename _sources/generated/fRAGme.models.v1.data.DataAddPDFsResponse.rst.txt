@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.models.v1.data`.\ :spelling:word:`DataAddPDFsResponse`
+==========================================================================
+
+.. currentmodule:: fRAGme.models.v1.data
+
+.. autoclass:: DataAddPDFsResponse

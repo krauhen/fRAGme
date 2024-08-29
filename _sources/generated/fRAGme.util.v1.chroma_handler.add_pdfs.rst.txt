@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.util.v1.chroma_handler`.\ :spelling:word:`add_pdfs`
+=======================================================================
+
+.. currentmodule:: fRAGme.util.v1.chroma_handler
+
+.. autoclass:: add_pdfs

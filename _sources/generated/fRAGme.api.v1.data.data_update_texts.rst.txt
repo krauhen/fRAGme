@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.api.v1.data`.\ :spelling:word:`data_update_texts`
+=====================================================================
+
+.. currentmodule:: fRAGme.api.v1.data
+
+.. autoclass:: data_update_texts

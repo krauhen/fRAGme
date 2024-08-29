@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.api.v1.cmd`.\ :spelling:word:`cmd_ask_question`
+===================================================================
+
+.. currentmodule:: fRAGme.api.v1.cmd
+
+.. autoclass:: cmd_ask_question

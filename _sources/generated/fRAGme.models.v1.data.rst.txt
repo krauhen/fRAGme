@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.models.v1`.\ :spelling:word:`data`
+======================================================
+
+.. currentmodule:: fRAGme.models.v1
+
+.. autoclass:: data

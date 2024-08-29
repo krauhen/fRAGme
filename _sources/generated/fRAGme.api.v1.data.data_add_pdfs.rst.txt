@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.api.v1.data`.\ :spelling:word:`data_add_pdfs`
+=================================================================
+
+.. currentmodule:: fRAGme.api.v1.data
+
+.. autoclass:: data_add_pdfs

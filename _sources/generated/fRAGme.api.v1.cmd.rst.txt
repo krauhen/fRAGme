@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.api.v1.cmd`.\ :spelling:word:`fRAGme.api.v1.cmd`
+==================================================
+
+.. currentmodule:: fRAGme.api.v1.cmd
+
+.. autoclass:: fRAGme.api.v1.cmd

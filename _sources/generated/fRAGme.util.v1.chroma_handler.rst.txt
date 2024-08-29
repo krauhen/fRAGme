@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.util.v1`.\ :spelling:word:`chroma_handler`
+==============================================================
+
+.. currentmodule:: fRAGme.util.v1
+
+.. autoclass:: chroma_handler

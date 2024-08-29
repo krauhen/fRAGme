@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Reference &mdash; fRAGme 0.1.7 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+      <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+      <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=f6190739" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="canonical" href="https://krauhen.github.io/fRAGme/classes.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=ca7ad2ea"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/thebelab-helper.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="fRAGme.api.v1.cmd.fRAGme.api.v1.cmd" href="generated/fRAGme.api.v1.cmd.html" />
+    <link rel="prev" title="Environment" href="environment.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.1.7
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker.html">Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment.html">Environment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modules">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/fRAGme.api.v1.cmd.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.cmd</span></code>.fRAGme.api.v1.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/fRAGme.api.v1.data.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.fRAGme.api.v1.data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1</span></code>.chroma_handler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmd-methods">cmd-Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.cmd.cmd_ask_question.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.cmd</span></code>.cmd_ask_question</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#data-methods">data-Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.data.data_add_texts.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.data_add_texts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.data.data_add_pdfs.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.data_add_pdfs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.data.data_get_texts.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.data_get_texts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.data.data_get_pdfs.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.data_get_pdfs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.data.data_get_databases.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.data_get_databases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.data.data_update_texts.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.data_update_texts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.data.data_delete_texts.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.data_delete_texts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.data.data_delete_pdfs.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.data_delete_pdfs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.data.data_delete_databases.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.data_delete_databases</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#chroma-handler-methods">chroma_handler-Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.create_vector_store.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.create_vector_store</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.get_vector_store.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.get_vector_store</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.add_texts.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.add_texts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.add_pdfs.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.add_pdfs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.get_texts.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.get_texts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.get_pdfs.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.get_pdfs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.get_databases.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.get_databases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.update_texts.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.update_texts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.delete_texts.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.delete_texts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.delete_pdfs.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.delete_pdfs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.delete_databases.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.delete_databases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.build_question.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.build_question</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#types">Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.cmd.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1</span></code>.cmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1</span></code>.data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cmd-models">cmd-Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.cmd.RoleEnum.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.cmd</span></code>.RoleEnum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.cmd.ChatAction.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.cmd</span></code>.ChatAction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.cmd.Question.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.cmd</span></code>.Question</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.cmd.CmdAskQuestionRequest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.cmd</span></code>.CmdAskQuestionRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.cmd.CmdAskQuestionResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.cmd</span></code>.CmdAskQuestionResponse</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#data-models">data-Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.Text.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.Text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.TextUpdate.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.TextUpdate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataAddTextsRequest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataAddTextsRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataAddTextsResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataAddTextsResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataAddPDFsResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataAddPDFsResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataGetTextsRequest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataGetTextsRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataGetTextsResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataGetTextsResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataGetPDFsRequest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataGetPDFsRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataGetPDFsResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataGetPDFsResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataGetDatabasesResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataGetDatabasesResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataUploadTextsRequest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataUploadTextsRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataUploadTextsResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataUploadTextsResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteTextsRequest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataDeleteTextsRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteTextsResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataDeleteTextsResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeletePDFsRequest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataDeletePDFsRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeletePDFsResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataDeletePDFsResponse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteDatabasesRequest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataDeleteDatabasesRequest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteDatabasesResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataDeleteDatabasesResponse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">fRAGme</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/classes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-reference">
+<span id="id1"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
+<section id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.cmd.html#fRAGme.api.v1.cmd" title="fRAGme.api.v1.cmd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.cmd</span></code></a></p></td>
+<td><p>This module provides an API endpoint to ask questions against a vector store using OpenAI's language model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.html#fRAGme.api.v1.data" title="fRAGme.api.v1.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data</span></code></a></p></td>
+<td><p>This module provides API endpoints for managing text snippets and PDFs in a vector store.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.html#fRAGme.util.v1.chroma_handler" title="fRAGme.util.v1.chroma_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler</span></code></a></p></td>
+<td><p>This module provides utility functions to handle vector stores using Chroma.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="cmd-methods">
+<h3>cmd-Methods<a class="headerlink" href="#cmd-methods" title="Link to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.cmd.cmd_ask_question.html#fRAGme.api.v1.cmd.cmd_ask_question" title="fRAGme.api.v1.cmd.cmd_ask_question"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.cmd.cmd_ask_question</span></code></a></p></td>
+<td><p>Endpoint to ask a question against a vector store.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-methods">
+<h3>data-Methods<a class="headerlink" href="#data-methods" title="Link to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.data_add_texts.html#fRAGme.api.v1.data.data_add_texts" title="fRAGme.api.v1.data.data_add_texts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data.data_add_texts</span></code></a></p></td>
+<td><p>Endpoint to add text snippets to a vector store.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.data_add_pdfs.html#fRAGme.api.v1.data.data_add_pdfs" title="fRAGme.api.v1.data.data_add_pdfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data.data_add_pdfs</span></code></a></p></td>
+<td><p>Endpoint to add pdfs to a vector store.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.data_get_texts.html#fRAGme.api.v1.data.data_get_texts" title="fRAGme.api.v1.data.data_get_texts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data.data_get_texts</span></code></a></p></td>
+<td><p>Endpoint to get text snippets from specified vector store.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.data_get_pdfs.html#fRAGme.api.v1.data.data_get_pdfs" title="fRAGme.api.v1.data.data_get_pdfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data.data_get_pdfs</span></code></a></p></td>
+<td><p>Endpoint to get pdf name from specified vector store.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.data_get_databases.html#fRAGme.api.v1.data.data_get_databases" title="fRAGme.api.v1.data.data_get_databases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data.data_get_databases</span></code></a></p></td>
+<td><p>Endpoint to get all present database names.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.data_update_texts.html#fRAGme.api.v1.data.data_update_texts" title="fRAGme.api.v1.data.data_update_texts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data.data_update_texts</span></code></a></p></td>
+<td><p>Endpoint to update text snippets.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.data_delete_texts.html#fRAGme.api.v1.data.data_delete_texts" title="fRAGme.api.v1.data.data_delete_texts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data.data_delete_texts</span></code></a></p></td>
+<td><p>Endpoint to delete text snippets.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.data_delete_pdfs.html#fRAGme.api.v1.data.data_delete_pdfs" title="fRAGme.api.v1.data.data_delete_pdfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data.data_delete_pdfs</span></code></a></p></td>
+<td><p>Endpoint to delete all text snippets from the specified pdfs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.data_delete_databases.html#fRAGme.api.v1.data.data_delete_databases" title="fRAGme.api.v1.data.data_delete_databases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data.data_delete_databases</span></code></a></p></td>
+<td><p>Endpoint to delete all databases.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="chroma-handler-methods">
+<h3>chroma_handler-Methods<a class="headerlink" href="#chroma-handler-methods" title="Link to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.create_vector_store.html#fRAGme.util.v1.chroma_handler.create_vector_store" title="fRAGme.util.v1.chroma_handler.create_vector_store"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.create_vector_store</span></code></a></p></td>
+<td><p>Create a vector store for a given identifier.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.get_vector_store.html#fRAGme.util.v1.chroma_handler.get_vector_store" title="fRAGme.util.v1.chroma_handler.get_vector_store"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.get_vector_store</span></code></a></p></td>
+<td><p>Retrieve the vector store for a given identifier, creating it if necessary.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.add_texts.html#fRAGme.util.v1.chroma_handler.add_texts" title="fRAGme.util.v1.chroma_handler.add_texts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.add_texts</span></code></a></p></td>
+<td><p>Add texts to the vector store for a given identifier.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.add_pdfs.html#fRAGme.util.v1.chroma_handler.add_pdfs" title="fRAGme.util.v1.chroma_handler.add_pdfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.add_pdfs</span></code></a></p></td>
+<td><p>Add PDFs to the vector store for a given identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.get_texts.html#fRAGme.util.v1.chroma_handler.get_texts" title="fRAGme.util.v1.chroma_handler.get_texts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.get_texts</span></code></a></p></td>
+<td><p>Retrieve texts from the vector store for a given identifier.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.get_pdfs.html#fRAGme.util.v1.chroma_handler.get_pdfs" title="fRAGme.util.v1.chroma_handler.get_pdfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.get_pdfs</span></code></a></p></td>
+<td><p>Retrieve PDF filenames from the vector store for a given identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.get_databases.html#fRAGme.util.v1.chroma_handler.get_databases" title="fRAGme.util.v1.chroma_handler.get_databases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.get_databases</span></code></a></p></td>
+<td><p>Retrieve all database identifiers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.update_texts.html#fRAGme.util.v1.chroma_handler.update_texts" title="fRAGme.util.v1.chroma_handler.update_texts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.update_texts</span></code></a></p></td>
+<td><p>Update texts in the vector store for a given identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.delete_texts.html#fRAGme.util.v1.chroma_handler.delete_texts" title="fRAGme.util.v1.chroma_handler.delete_texts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.delete_texts</span></code></a></p></td>
+<td><p>Delete texts from the vector store for a given identifier.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.delete_pdfs.html#fRAGme.util.v1.chroma_handler.delete_pdfs" title="fRAGme.util.v1.chroma_handler.delete_pdfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.delete_pdfs</span></code></a></p></td>
+<td><p>Delete PDFs from the vector store for a given identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.delete_databases.html#fRAGme.util.v1.chroma_handler.delete_databases" title="fRAGme.util.v1.chroma_handler.delete_databases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.delete_databases</span></code></a></p></td>
+<td><p>Delete databases for given identifiers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.build_question.html#fRAGme.util.v1.chroma_handler.build_question" title="fRAGme.util.v1.chroma_handler.build_question"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler.build_question</span></code></a></p></td>
+<td><p>Build a question template with snippets from the vector store.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="types">
+<h2>Types<a class="headerlink" href="#types" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3>Modules<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.cmd.html#fRAGme.models.v1.cmd" title="fRAGme.models.v1.cmd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.cmd</span></code></a></p></td>
+<td><p>This module contains models and enums used for the command API.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.html#fRAGme.models.v1.data" title="fRAGme.models.v1.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data</span></code></a></p></td>
+<td><p>This module contains Pydantic models for handling data requests and responses related to texts and PDFs in the fRAGme application.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cmd-models">
+<h3>cmd-Models<a class="headerlink" href="#cmd-models" title="Link to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.cmd.RoleEnum.html#fRAGme.models.v1.cmd.RoleEnum" title="fRAGme.models.v1.cmd.RoleEnum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.cmd.RoleEnum</span></code></a></p></td>
+<td><p>Enum representing the role in a chat.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.cmd.ChatAction.html#fRAGme.models.v1.cmd.ChatAction" title="fRAGme.models.v1.cmd.ChatAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.cmd.ChatAction</span></code></a></p></td>
+<td><p>Model representing an action in a chat.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.cmd.Question.html#fRAGme.models.v1.cmd.Question" title="fRAGme.models.v1.cmd.Question"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.cmd.Question</span></code></a></p></td>
+<td><p>Model representing a question with its context and parameters.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.cmd.CmdAskQuestionRequest.html#fRAGme.models.v1.cmd.CmdAskQuestionRequest" title="fRAGme.models.v1.cmd.CmdAskQuestionRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.cmd.CmdAskQuestionRequest</span></code></a></p></td>
+<td><p>Model representing a request to ask a question.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.cmd.CmdAskQuestionResponse.html#fRAGme.models.v1.cmd.CmdAskQuestionResponse" title="fRAGme.models.v1.cmd.CmdAskQuestionResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.cmd.CmdAskQuestionResponse</span></code></a></p></td>
+<td><p>Model representing a response to the asked question.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-models">
+<h3>data-Models<a class="headerlink" href="#data-models" title="Link to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.Text.html#fRAGme.models.v1.data.Text" title="fRAGme.models.v1.data.Text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.Text</span></code></a></p></td>
+<td><p>Model representing a text entry with associated metadata.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.TextUpdate.html#fRAGme.models.v1.data.TextUpdate" title="fRAGme.models.v1.data.TextUpdate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.TextUpdate</span></code></a></p></td>
+<td><p>Model representing an update to a text entry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataAddTextsRequest.html#fRAGme.models.v1.data.DataAddTextsRequest" title="fRAGme.models.v1.data.DataAddTextsRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataAddTextsRequest</span></code></a></p></td>
+<td><p>Request model for adding multiple text entries.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataAddTextsResponse.html#fRAGme.models.v1.data.DataAddTextsResponse" title="fRAGme.models.v1.data.DataAddTextsResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataAddTextsResponse</span></code></a></p></td>
+<td><p>Response model indicating the status of adding text entries.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataAddPDFsResponse.html#fRAGme.models.v1.data.DataAddPDFsResponse" title="fRAGme.models.v1.data.DataAddPDFsResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataAddPDFsResponse</span></code></a></p></td>
+<td><p>Response model indicating the status of adding PDF entries.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataGetTextsRequest.html#fRAGme.models.v1.data.DataGetTextsRequest" title="fRAGme.models.v1.data.DataGetTextsRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataGetTextsRequest</span></code></a></p></td>
+<td><p>Request model for retrieving specific text entries by their IDs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataGetTextsResponse.html#fRAGme.models.v1.data.DataGetTextsResponse" title="fRAGme.models.v1.data.DataGetTextsResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataGetTextsResponse</span></code></a></p></td>
+<td><p>Response model containing the requested text entries.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataGetPDFsRequest.html#fRAGme.models.v1.data.DataGetPDFsRequest" title="fRAGme.models.v1.data.DataGetPDFsRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataGetPDFsRequest</span></code></a></p></td>
+<td><p>Request model for retrieving PDFs associated with an identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataGetPDFsResponse.html#fRAGme.models.v1.data.DataGetPDFsResponse" title="fRAGme.models.v1.data.DataGetPDFsResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataGetPDFsResponse</span></code></a></p></td>
+<td><p>Response model containing the requested PDF names.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataGetDatabasesResponse.html#fRAGme.models.v1.data.DataGetDatabasesResponse" title="fRAGme.models.v1.data.DataGetDatabasesResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataGetDatabasesResponse</span></code></a></p></td>
+<td><p>Response model containing the list of available databases.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataUploadTextsRequest.html#fRAGme.models.v1.data.DataUploadTextsRequest" title="fRAGme.models.v1.data.DataUploadTextsRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataUploadTextsRequest</span></code></a></p></td>
+<td><p>Request model for uploading updates to text entries.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataUploadTextsResponse.html#fRAGme.models.v1.data.DataUploadTextsResponse" title="fRAGme.models.v1.data.DataUploadTextsResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataUploadTextsResponse</span></code></a></p></td>
+<td><p>Response model indicating the status of uploading text updates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteTextsRequest.html#fRAGme.models.v1.data.DataDeleteTextsRequest" title="fRAGme.models.v1.data.DataDeleteTextsRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataDeleteTextsRequest</span></code></a></p></td>
+<td><p>Request model for deleting specific text entries by their IDs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteTextsResponse.html#fRAGme.models.v1.data.DataDeleteTextsResponse" title="fRAGme.models.v1.data.DataDeleteTextsResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataDeleteTextsResponse</span></code></a></p></td>
+<td><p>Response model indicating the status of deleting text entries.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeletePDFsRequest.html#fRAGme.models.v1.data.DataDeletePDFsRequest" title="fRAGme.models.v1.data.DataDeletePDFsRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataDeletePDFsRequest</span></code></a></p></td>
+<td><p>Request model for deleting specific PDFs by their names.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeletePDFsResponse.html#fRAGme.models.v1.data.DataDeletePDFsResponse" title="fRAGme.models.v1.data.DataDeletePDFsResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataDeletePDFsResponse</span></code></a></p></td>
+<td><p>Response model indicating the status of deleting PDF entries.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteDatabasesRequest.html#fRAGme.models.v1.data.DataDeleteDatabasesRequest" title="fRAGme.models.v1.data.DataDeleteDatabasesRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataDeleteDatabasesRequest</span></code></a></p></td>
+<td><p>Request model for deleting specific databases by their identifiers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteDatabasesResponse.html#fRAGme.models.v1.data.DataDeleteDatabasesResponse" title="fRAGme.models.v1.data.DataDeleteDatabasesResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataDeleteDatabasesResponse</span></code></a></p></td>
+<td><p>Response model indicating the status of deleting databases.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="environment.html" class="btn btn-neutral float-left" title="Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="generated/fRAGme.api.v1.cmd.html" class="btn btn-neutral float-right" title="fRAGme.api.v1.cmd.fRAGme.api.v1.cmd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Henning Krause.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

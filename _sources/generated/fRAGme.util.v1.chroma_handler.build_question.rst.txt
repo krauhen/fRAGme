@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.util.v1.chroma_handler`.\ :spelling:word:`build_question`
+=============================================================================
+
+.. currentmodule:: fRAGme.util.v1.chroma_handler
+
+.. autoclass:: build_question

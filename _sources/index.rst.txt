@@ -1,6 +1,6 @@
 
 Welcome to the fRAGme documentation!
-======================================
+====================================
 
 .. include:: ../README.md
    :parser: myst_parser.sphinx_
@@ -14,3 +14,4 @@ Welcome to the fRAGme documentation!
    usage
    docker
    environment
+   classes

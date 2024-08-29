@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.util.v1.chroma_handler`.\ :spelling:word:`get_vector_store`
+===============================================================================
+
+.. currentmodule:: fRAGme.util.v1.chroma_handler
+
+.. autoclass:: get_vector_store

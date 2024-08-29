@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.models.v1.data`.\ :spelling:word:`DataDeleteTextsResponse`
+==============================================================================
+
+.. currentmodule:: fRAGme.models.v1.data
+
+.. autoclass:: DataDeleteTextsResponse

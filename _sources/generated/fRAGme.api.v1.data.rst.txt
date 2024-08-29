@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.api.v1.data`.\ :spelling:word:`fRAGme.api.v1.data`
+===================================================
+
+.. currentmodule:: fRAGme.api.v1.data
+
+.. autoclass:: fRAGme.api.v1.data
