@@ -30,8 +30,10 @@ jobs:
       - name: Build the Docker image
         run: |
           docker-compose build
-          docker tag ${{ env.IMAGE_NAME }}:latest krauhen/${{ env.IMAGE_NAME }}:latest
+          docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+          # docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
 
       - name: Push the Docker image
         run: |
-            docker push krauhen/${{ env.IMAGE_NAME }}:latest
+            docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+            # docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
