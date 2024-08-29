@@ -1,3 +1,3 @@
-"""This is the package fRAGme"""
+"""This is a dockerized RAG FastAPI service with vector store handling."""
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
