@@ -38,6 +38,10 @@ jobs:
           echo "=> ==== <="
           echo "=> ==== <="
           echo "=> ==== <="
+          echo ${{ FRAGME_VERSION }}
+          echo "=> ==== <="
+          echo "=> ==== <="
+          echo "=> ==== <="
           echo ${{ env.FRAGME_VERSION }}
           echo "=> ==== <="
           echo "=> ==== <="
