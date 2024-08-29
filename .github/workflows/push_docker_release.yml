@@ -35,7 +35,7 @@ jobs:
           pip install .
           # FRAGME_VERSION=$(python -c 'import fRAGme; print(fRAGme.__version__)')
           echo "FRAGME_VERSION=v$FRAGME_VERSION" >> $GITHUB_ENV
-      #     echo ${{ env.FRAGME_VERSION }}
+          echo ${{ env.FRAGME_VERSION }}
       #     docker-compose build
       #     docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
       #     docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.FRAGME_VERSION }}
