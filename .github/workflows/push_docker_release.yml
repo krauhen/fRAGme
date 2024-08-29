@@ -30,32 +30,24 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
-      - name: Build the Docker image
+      - name: Generate the version tag
         run: |
           pip install .
-          echo "=> ==== <="
-          echo "=> ==== <="
-          echo "=> ==== <="
           FRAGME_VERSION=v$(python -c 'import fRAGme; print(fRAGme.__version__)')
-          echo "=> ==== <="
-          echo "=> ==== <="
-          echo "=> ==== <="
           echo $FRAGME_VERSION
-          echo "=> ==== <="
-          echo "=> ==== <="
-          echo "=> ==== <="
           echo "FRAGME_VERSION=$FRAGME_VERSION" >> $GITHUB_ENV
-          echo ${{ env.FRAGME_VERSION }}
-          echo "=> ==== <="
-          echo "=> ==== <="
-          echo "=> ==== <="
-      - name: Use FRAGME_VERSION
-        run: echo ${{ env.FRAGME_VERSION }}
-          docker-compose build
-          docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-          docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.FRAGME_VERSION }}
-
-      - name: Push the Docker image
+          
+      - name: Build the Docker image
         run: |
-            docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.FRAGME_VERSION }}
+          echo ${{ env.FRAGME_VERSION }}
+          docker-compose build
+
+      - name: Tag and push the image latest
+        run: |
+          docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+
+      - name: Tag and push the image FRAGME_VERSION
+        run: |
+          docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.FRAGME_VERSION }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.FRAGME_VERSION }}
