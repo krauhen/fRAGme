@@ -1,3 +1,3 @@
 """This is a dockerized RAG FastAPI service with vector store handling."""
 
-__version__ = "0.1.4"
+__version__ = "0.1.5"
