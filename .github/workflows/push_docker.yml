@@ -31,9 +31,9 @@ jobs:
         run: |
           docker-compose build
           docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-          # docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
+          docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
 
       - name: Push the Docker image
         run: |
             docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            # docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
+            docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
