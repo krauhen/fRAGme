@@ -8,7 +8,7 @@ From dockerhub
 
 .. code-block:: bash
 
-    docker pull krauhen/fRAGme
+    docker pull krauhen/fragme
     docker run -d \
               --name fragme \
               --hostname fragme \
