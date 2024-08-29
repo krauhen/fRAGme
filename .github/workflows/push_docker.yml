@@ -34,5 +34,6 @@ jobs:
 
       - name: Push the Docker image
         run: |
+            echo ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
             docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
             docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
