@@ -88,14 +88,6 @@ latex_elements = {
     """,
 }
 
-# intersphinx
-intersphinx_mapping = {
-    "qiskit": ("https://docs.quantum.ibm.com/api/qiskit/", None),
-    "qiskit-aer": ("https://qiskit.github.io/qiskit-aer/", None),
-    "scipy": ("https://docs.scipy.org/doc/scipy/", None),
-    "sklearn": ("https://scikit-learn.org/stable/", None),
-}
-
 suppress_warnings = ["myst.header", "config.cache"]
 
 # base URL for sphinx_sitemap

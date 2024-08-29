@@ -4,6 +4,7 @@ data/tmp/*
 !data/tmp
 !data/tmp/.gitkeep
 .idea
+docs/generated
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template
