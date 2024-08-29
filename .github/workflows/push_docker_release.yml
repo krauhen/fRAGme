@@ -22,6 +22,7 @@ jobs:
       - name: Install Docker Compose
         run: |
           sudo apt-get update
+          sudo apt-get upgrade
           sudo apt-get install -y docker-compose
 
       - name: Log in to Docker Hub
@@ -32,10 +33,13 @@ jobs:
 
       - name: Generate the version tag
         run: |
+          python -m venv venv
+          source venv/bin/activate
           pip install .
           FRAGME_VERSION=v$(python -c 'import fRAGme; print(fRAGme.__version__)')
           echo $FRAGME_VERSION
           echo "FRAGME_VERSION=$FRAGME_VERSION" >> $GITHUB_ENV
+          deactivate
           
       - name: Build the Docker image
         run: |
