@@ -1,3 +1,7 @@
+"""
+This module contains models and enums used for the command API.
+"""
+
 from enum import Enum
 from typing import List
 from pydantic import BaseModel
@@ -21,18 +25,37 @@ BASE_PROMPT = (
 
 
 class RoleEnum(str, Enum):
-    user = "user"
-    system = "system"
-    assistant = "assistant"
+    """Enum representing the role in a chat."""
+
+    USER = "user"
+    SYSTEM = "system"
+    ASSISTANT = "assistant"
 
 
 class ChatAction(BaseModel):
+    """Model representing an action in a chat."""
+
     role: RoleEnum
     content: str
 
 
 class Question(BaseModel):
+    """Model representing a question with its context and parameters."""
+
     base_prompt: str = BASE_PROMPT
     chat_history: List[ChatAction]
     question: str
-    k_similar_text_snippets: int = 2
+    k_similar_text_snippets: int = 10
+
+
+class CmdAskQuestionRequest(BaseModel):
+    """Model representing a request to ask a question."""
+
+    info: Question
+    identifier: str
+
+
+class CmdAskQuestionResponse(BaseModel):
+    """Model representing a response to the asked question."""
+
+    result: ChatAction

@@ -1,87 +1,220 @@
+"""
+This module provides API endpoints for managing text snippets and PDFs in a vector store.
+"""
+
+from typing import List
 from fastapi import APIRouter, HTTPException, File, UploadFile
-from fRAGme.util.v1.chroma_handler import *
+
+from fRAGme.util.v1.chroma_handler import (
+    add_texts,
+    add_pdfs,
+    get_texts,
+    get_pdfs,
+    get_databases,
+    update_texts,
+    delete_texts,
+    delete_pdfs,
+    delete_databases,
+)
+from fRAGme.models.v1.data import (
+    DataAddTextsRequest,
+    DataAddTextsResponse,
+    DataAddPDFsResponse,
+    DataGetTextsRequest,
+    DataGetTextsResponse,
+    DataGetPDFsRequest,
+    DataGetPDFsResponse,
+    DataGetDatabasesResponse,
+    DataUploadTextsRequest,
+    DataUploadTextsResponse,
+    DataDeleteTextsRequest,
+    DataDeleteTextsResponse,
+    DataDeletePDFsRequest,
+    DataDeletePDFsResponse,
+    DataDeleteDatabasesRequest,
+    DataDeleteDatabasesResponse,
+)
 
 router = APIRouter()
 
 
-@router.post("/add_texts")
-def data_add_text(texts: List[Text], identifier: str):
+@router.post("/add_texts", response_model=DataAddTextsResponse)
+def data_add_texts(request: DataAddTextsRequest):
+    """Endpoint to add text snippets to a vector store.
+
+    Args:
+        request: An request object to fill with parameters.
+
+    Returns:
+        Return true if the process was successful.
+
+    Raises:
+        HTTPException: Generic internal server error.
+    """
     try:
-        add_texts(texts, identifier)
+        add_texts(request.texts, request.identifier)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
-    return {"result": True}
+    return DataAddTextsResponse(status=True)
 
 
-@router.post("/add_pdfs")
+@router.post("/add_pdfs", response_model=DataAddPDFsResponse)
 def data_add_pdfs(identifier: str, pdfs: List[UploadFile] = File(...)):
+    """Endpoint to add pdfs to a vector store.
+
+    Args:
+        identifier: Name of the vector store.
+        pdfs: PDF objects to upload.
+
+    Returns:
+        Return true if the process was successful.
+
+    Raises:
+        HTTPException: Generic internal server error.
+    """
     try:
         add_pdfs(identifier, pdfs)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
-    return {"result": True}
+    return DataAddPDFsResponse(status=True)
 
 
-@router.post("/get_texts")
-def data_get_texts(identifier: str, ids: List[str]):
+@router.post("/get_texts", response_model=DataGetTextsResponse)
+def data_get_texts(request: DataGetTextsRequest):
+    """Endpoint to get text snippets from specified vector store.
+
+    Args:
+        request: An request object to fill with parameters.
+
+    Returns:
+        Return dictionary of Text objects.
+
+    Raises:
+        HTTPException: Generic internal server error.
+    """
     try:
-        documents = get_texts(identifier, ids)
+        documents = get_texts(request.identifier, request.ids)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    return {"result": documents}
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    return DataGetTextsResponse(documents=documents)
 
 
-@router.get("/get_pdfs")
-def data_get_pdfs(identifier: str):
+@router.post("/get_pdfs", response_model=DataGetPDFsResponse)
+def data_get_pdfs(request: DataGetPDFsRequest):
+    """Endpoint to get pdf name from specified vector store.
+
+    Args:
+        request: An request object to fill with parameters.
+
+    Returns:
+        Return a list with pdf filenames.
+
+    Raises:
+        HTTPException: Generic internal server error.
+    """
     try:
-        documents = get_pdfs(identifier)
+        documents = get_pdfs(request.identifier)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    return {"result": documents}
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    return DataGetPDFsResponse(documents=documents)
 
 
-@router.get("/get_databases")
+@router.get("/get_databases", response_model=DataGetDatabasesResponse)
 def data_get_databases():
+    """Endpoint to get all present database names.
+
+    Args:
+
+    Returns:
+        Return a list with database names.
+
+    Raises:
+        HTTPException: Generic internal server error.
+    """
     try:
-        documents = get_databases()
+        databases = get_databases()
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    return {"result": documents}
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    return DataGetDatabasesResponse(databases=databases)
 
 
-@router.put("/update_texts")
-def data_update_texts(identifier: str, updates: Dict[str, TextUpdate]):
+@router.put("/update_texts", response_model=DataUploadTextsResponse)
+def data_update_texts(request: DataUploadTextsRequest):
+    """Endpoint to update text snippets.
+
+    Args:
+        request: An request object to fill with parameters.
+
+    Returns:
+        Return true if the process was successful.
+
+    Raises:
+        HTTPException: Generic internal server error.
+    """
     try:
-        update_texts(identifier, updates)
+        update_texts(request.identifier, request.updates)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    return {"result": True}
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    return DataUploadTextsResponse(status=True)
 
 
-@router.delete("/delete_texts")
-def data_delete_texts(identifier: str, ids: List[str]):
+@router.delete("/delete_texts", response_model=DataDeleteTextsResponse)
+def data_delete_texts(request: DataDeleteTextsRequest):
+    """Endpoint to delete text snippets.
+
+    Args:
+        request: An request object to fill with parameters.
+
+    Returns:
+        Return true if the process was successful.
+
+    Raises:
+        HTTPException: Generic internal server error.
+    """
     try:
-        delete_texts(identifier, ids)
+        delete_texts(request.identifier, request.ids)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    return {"result": True}
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    return DataDeleteTextsResponse(status=True)
 
 
-@router.delete("/delete_pdfs")
-def data_delete_pdfs(identifier: str, pdf_names: List[str]):
+@router.delete("/delete_pdfs", response_model=DataDeletePDFsResponse)
+def data_delete_pdfs(request: DataDeletePDFsRequest):
+    """Endpoint to delete all text snippets from the specified pdfs.
+
+    Args:
+        request: An request object to fill with parameters.
+
+    Returns:
+        Return true if the process was successful.
+
+    Raises:
+        HTTPException: Generic internal server error.
+    """
     try:
-        delete_pdfs(identifier, pdf_names)
+        delete_pdfs(request.identifier, request.pdf_names)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    return {"result": True}
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    return DataDeletePDFsResponse(status=True)
 
 
-@router.delete("/delete_databases")
-def data_delete_databases(identifiers: List[str]):
+@router.delete("/delete_databases", response_model=DataDeleteDatabasesResponse)
+def data_delete_databases(request: DataDeleteDatabasesRequest):
+    """Endpoint to delete all databases.
+
+    Args:
+        request: An request object to fill with parameters.
+
+    Returns:
+        Return true if the process was successful.
+
+    Raises:
+        HTTPException: Generic internal server error.
+    """
     try:
-        delete_databases(identifiers)
+        delete_databases(request.identifiers)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    return {"result": True}
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    return DataDeleteDatabasesResponse(status=True)
