@@ -30,10 +30,8 @@ jobs:
       - name: Build the Docker image
         run: |
           docker-compose build
-          docker tag ${{ env.IMAGE_NAME }}:latest ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
 
       - name: Push the Docker image
         run: |
-            echo ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+            echo ${{ secrets.DOCKER_USERNAME }}
             docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}-nightly
