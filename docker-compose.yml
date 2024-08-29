@@ -12,3 +12,5 @@ services:
     build: .
     env_file:
       - .env
+    volumes:
+      - ${DATA_PATH}:/tmp/data
