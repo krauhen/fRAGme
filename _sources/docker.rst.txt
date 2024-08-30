@@ -18,7 +18,7 @@ From dockerhub
               -e HOST=0.0.0.0 \
               -e OPENAI_API_KEY="" \
               -e DATA_PATH="./data" \
-              fragme
+              krauhen/fragme:latest
 
 .. image:: _static/images/terminal_docker_up.png
   :width: 800
