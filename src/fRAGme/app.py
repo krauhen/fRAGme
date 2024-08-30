@@ -4,6 +4,7 @@ which provides a Retrieval Augmented Generation (RAG) Service.
 """
 
 import os
+
 from dotenv import load_dotenv
 
 from fastapi import FastAPI
@@ -14,7 +15,8 @@ from fRAGme.api.v1.cmd import router as cmd_router
 from fRAGme.util.v1.chroma_handler import get_vector_store
 
 # Load environment variables from a .env file
-load_dotenv()
+load_dotenv(verbose=True, override=False)
+
 
 # Initialize the FastAPI app
 app = FastAPI(
