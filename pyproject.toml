@@ -23,7 +23,8 @@ dependencies = [
     "langchain-chroma",
     "langchain-community",
     "python-multipart",
-    "pypdf"
+    "pypdf",
+    "pyjwt"
 ]
 
 [project.optional-dependencies]
