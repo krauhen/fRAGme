@@ -26,8 +26,12 @@ def fake_users_db():
     Returns:
         dict: A dictionary containing user data loaded from the fake_db.json file.
     """
-    with open("./data/tmp/fake_db.json") as users_db:
-        return json.load(users_db)
+    db = dict()
+    db["admin"] = dict()
+    db["admin"]["username"] = "admin"
+    db["admin"]["hashed_password"] = os.getenv("ADMIN_SECRET")
+
+    return db
 
 
 def verify_password(plain_password, hashed_password):
@@ -169,6 +173,5 @@ async def get_current_active_user(
 if __name__ == "__main__":
     plain_password = "test"
     print(plain_password)
-    # hashed_password = pwd_context.hash(plain_password)
     hashed_password = get_password_hash(plain_password)
     print(hashed_password)

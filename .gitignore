@@ -3,7 +3,6 @@ data/tmp/*
 !data/.gitkeep
 !data/tmp
 !data/tmp/.gitkeep
-!data/tmp/fake_db.json
 .idea
 docs/generated
 
