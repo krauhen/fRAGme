@@ -3,9 +3,13 @@ This module provides an API endpoint to ask questions against a vector store
 using OpenAI's language model.
 """
 
-from fastapi import APIRouter, HTTPException
+from typing import Annotated
+
+from fastapi import APIRouter, HTTPException, Depends
 from openai import OpenAI
 
+from fRAGme.models.v1.auth import User
+from fRAGme.util.auth import get_current_active_user
 from fRAGme.util.v1.chroma_handler import build_question
 from fRAGme.models.v1.cmd import (
     CmdAskQuestionRequest,
@@ -18,7 +22,10 @@ router = APIRouter()
 
 
 @router.post("/ask_question", response_model=CmdAskQuestionResponse)
-def cmd_ask_question(request: CmdAskQuestionRequest):
+def cmd_ask_question(
+    request: CmdAskQuestionRequest,
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
     """Endpoint to ask a question against a vector store.
 
     Args:
