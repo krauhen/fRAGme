@@ -2,9 +2,11 @@
 This module provides API endpoints for managing text snippets and PDFs in a vector store.
 """
 
-from typing import List
-from fastapi import APIRouter, HTTPException, File, UploadFile
+from typing import List, Annotated
+from fastapi import APIRouter, HTTPException, File, UploadFile, Depends
 
+from fRAGme.models.v1.auth import User
+from fRAGme.util.v1.auth import get_current_active_user
 from fRAGme.util.v1.chroma_handler import (
     add_texts,
     add_pdfs,
@@ -39,7 +41,10 @@ router = APIRouter()
 
 
 @router.post("/add_texts", response_model=DataAddTextsResponse)
-def data_add_texts(request: DataAddTextsRequest):
+def data_add_texts(
+    request: DataAddTextsRequest,
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
     """Endpoint to add text snippets to a vector store.
 
     Args:
@@ -60,7 +65,11 @@ def data_add_texts(request: DataAddTextsRequest):
 
 
 @router.post("/add_pdfs", response_model=DataAddPDFsResponse)
-def data_add_pdfs(identifier: str, pdfs: List[UploadFile] = File(...)):
+def data_add_pdfs(
+    identifier: str,
+    current_user: Annotated[User, Depends(get_current_active_user)],
+    pdfs: List[UploadFile] = File(...),
+):
     """Endpoint to add pdfs to a vector store.
 
     Args:
@@ -82,7 +91,10 @@ def data_add_pdfs(identifier: str, pdfs: List[UploadFile] = File(...)):
 
 
 @router.post("/get_texts", response_model=DataGetTextsResponse)
-def data_get_texts(request: DataGetTextsRequest):
+def data_get_texts(
+    request: DataGetTextsRequest,
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
     """Endpoint to get text snippets from specified vector store.
 
     Args:
@@ -102,7 +114,10 @@ def data_get_texts(request: DataGetTextsRequest):
 
 
 @router.post("/get_pdfs", response_model=DataGetPDFsResponse)
-def data_get_pdfs(request: DataGetPDFsRequest):
+def data_get_pdfs(
+    request: DataGetPDFsRequest,
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
     """Endpoint to get pdf name from specified vector store.
 
     Args:
@@ -122,7 +137,7 @@ def data_get_pdfs(request: DataGetPDFsRequest):
 
 
 @router.get("/get_databases", response_model=DataGetDatabasesResponse)
-def data_get_databases():
+def data_get_databases(current_user: Annotated[User, Depends(get_current_active_user)]):
     """Endpoint to get all present database names.
 
     Args:
@@ -141,7 +156,10 @@ def data_get_databases():
 
 
 @router.put("/update_texts", response_model=DataUploadTextsResponse)
-def data_update_texts(request: DataUploadTextsRequest):
+def data_update_texts(
+    request: DataUploadTextsRequest,
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
     """Endpoint to update text snippets.
 
     Args:
@@ -161,7 +179,10 @@ def data_update_texts(request: DataUploadTextsRequest):
 
 
 @router.delete("/delete_texts", response_model=DataDeleteTextsResponse)
-def data_delete_texts(request: DataDeleteTextsRequest):
+def data_delete_texts(
+    request: DataDeleteTextsRequest,
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
     """Endpoint to delete text snippets.
 
     Args:
@@ -181,7 +202,10 @@ def data_delete_texts(request: DataDeleteTextsRequest):
 
 
 @router.delete("/delete_pdfs", response_model=DataDeletePDFsResponse)
-def data_delete_pdfs(request: DataDeletePDFsRequest):
+def data_delete_pdfs(
+    request: DataDeletePDFsRequest,
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
     """Endpoint to delete all text snippets from the specified pdfs.
 
     Args:
@@ -201,7 +225,10 @@ def data_delete_pdfs(request: DataDeletePDFsRequest):
 
 
 @router.delete("/delete_databases", response_model=DataDeleteDatabasesResponse)
-def data_delete_databases(request: DataDeleteDatabasesRequest):
+def data_delete_databases(
+    request: DataDeleteDatabasesRequest,
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
     """Endpoint to delete all databases.
 
     Args:
