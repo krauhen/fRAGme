@@ -1,0 +1,6 @@
+{
+  "admin": {
+    "username": "admin",
+    "hashed_password": "YOUR_HASHED_PASSWORD"
+  }
+}
