@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.models.v1.auth`.\ :spelling:word:`User`
+===========================================================
+
+.. currentmodule:: fRAGme.models.v1.auth
+
+.. autoclass:: User

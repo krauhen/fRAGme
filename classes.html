@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Reference &mdash; fRAGme 0.1.8 documentation</title>
+  <title>API Reference &mdash; fRAGme 0.1.10 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
@@ -21,7 +21,7 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=22607128"></script>
+        <script src="_static/documentation_options.js?v=bafade30"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/thebelab-helper.js"></script>
@@ -48,7 +48,7 @@
               <img src="_static/logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.1.8
+                0.1.10
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -68,6 +68,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#modules">Modules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/fRAGme.api.v1.cmd.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.cmd</span></code>.fRAGme.api.v1.cmd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/fRAGme.api.v1.data.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.fRAGme.api.v1.data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/fRAGme.api.v1.auth.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.auth</span></code>.fRAGme.api.v1.auth</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1</span></code>.chroma_handler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cmd-methods">cmd-Methods</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.cmd.cmd_ask_question.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.cmd</span></code>.cmd_ask_question</a></li>
@@ -85,6 +86,7 @@
 <li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.api.v1.data.data_delete_databases.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.api.v1.data</span></code>.data_delete_databases</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#auth-methods">auth-Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#chroma-handler-methods">chroma_handler-Methods</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.create_vector_store.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.create_vector_store</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.get_vector_store.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.util.v1.chroma_handler</span></code>.get_vector_store</a></li>
@@ -106,6 +108,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#id2">Modules</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.cmd.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1</span></code>.cmd</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1</span></code>.data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.auth.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1</span></code>.auth</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#cmd-models">cmd-Models</a><ul>
@@ -135,6 +138,13 @@
 <li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeletePDFsResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataDeletePDFsResponse</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteDatabasesRequest.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataDeleteDatabasesRequest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteDatabasesResponse.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.data</span></code>.DataDeleteDatabasesResponse</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#auth-models">auth-Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.auth.Token.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.auth</span></code>.Token</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.auth.TokenData.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.auth</span></code>.TokenData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.auth.User.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.auth</span></code>.User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/fRAGme.models.v1.auth.UserInDB.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fRAGme.models.v1.auth</span></code>.UserInDB</a></li>
 </ul>
 </li>
 </ul>
@@ -179,7 +189,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.data.html#fRAGme.api.v1.data" title="fRAGme.api.v1.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.data</span></code></a></p></td>
 <td><p>This module provides API endpoints for managing text snippets and PDFs in a vector store.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.html#fRAGme.util.v1.chroma_handler" title="fRAGme.util.v1.chroma_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.api.v1.auth.html#fRAGme.api.v1.auth" title="fRAGme.api.v1.auth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">api.v1.auth</span></code></a></p></td>
+<td><p>This module defines the authentication routes for the FastAPI application, specifically handling the generation of access tokens for users.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.util.v1.chroma_handler.html#fRAGme.util.v1.chroma_handler" title="fRAGme.util.v1.chroma_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">util.v1.chroma_handler</span></code></a></p></td>
 <td><p>This module provides utility functions to handle vector stores using Chroma.</p></td>
 </tr>
 </tbody>
@@ -227,6 +240,23 @@
 </tr>
 </tbody>
 </table>
+</section>
+<section id="auth-methods">
+<h3>auth-Methods<a class="headerlink" href="#auth-methods" title="Link to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+</tbody>
+</table>
+<dl class="simple">
+<dt>#   util.v1.auth.fake_users_db</dt><dd><p>util.v1.auth.verify_password
+util.v1.auth.get_password_hash
+util.v1.auth.get_user
+util.v1.auth.authenticate_user
+util.v1.auth.create_access_token
+util.v1.auth.get_current_user
+util.v1.auth.get_current_active_user</p>
+</dd>
+</dl>
 </section>
 <section id="chroma-handler-methods">
 <h3>chroma_handler-Methods<a class="headerlink" href="#chroma-handler-methods" title="Link to this heading"></a></h3>
@@ -283,6 +313,9 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.html#fRAGme.models.v1.data" title="fRAGme.models.v1.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data</span></code></a></p></td>
 <td><p>This module contains Pydantic models for handling data requests and responses related to texts and PDFs in the fRAGme application.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.auth.html#fRAGme.models.v1.auth" title="fRAGme.models.v1.auth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.auth</span></code></a></p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
@@ -366,6 +399,25 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.data.DataDeleteDatabasesResponse.html#fRAGme.models.v1.data.DataDeleteDatabasesResponse" title="fRAGme.models.v1.data.DataDeleteDatabasesResponse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.data.DataDeleteDatabasesResponse</span></code></a></p></td>
 <td><p>Response model indicating the status of deleting databases.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="auth-models">
+<h3>auth-Models<a class="headerlink" href="#auth-models" title="Link to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.auth.Token.html#fRAGme.models.v1.auth.Token" title="fRAGme.models.v1.auth.Token"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.auth.Token</span></code></a></p></td>
+<td><p>Represents an access token.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.auth.TokenData.html#fRAGme.models.v1.auth.TokenData" title="fRAGme.models.v1.auth.TokenData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.auth.TokenData</span></code></a></p></td>
+<td><p>Represents the data contained within a token.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.auth.User.html#fRAGme.models.v1.auth.User" title="fRAGme.models.v1.auth.User"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.auth.User</span></code></a></p></td>
+<td><p>Represents a user in the system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/fRAGme.models.v1.auth.UserInDB.html#fRAGme.models.v1.auth.UserInDB" title="fRAGme.models.v1.auth.UserInDB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models.v1.auth.UserInDB</span></code></a></p></td>
+<td><p>Represents a user stored in the database.</p></td>
 </tr>
 </tbody>
 </table>

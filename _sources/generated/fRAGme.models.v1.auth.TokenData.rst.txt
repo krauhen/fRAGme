@@ -1,0 +1,6 @@
+﻿:mod:`fRAGme.models.v1.auth`.\ :spelling:word:`TokenData`
+================================================================
+
+.. currentmodule:: fRAGme.models.v1.auth
+
+.. autoclass:: TokenData

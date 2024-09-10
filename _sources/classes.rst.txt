@@ -16,6 +16,7 @@ Modules
 
    api.v1.cmd
    api.v1.data
+   api.v1.auth
    util.v1.chroma_handler
 
 cmd-Methods
@@ -31,7 +32,7 @@ cmd-Methods
    api.v1.cmd.cmd_ask_question
 
 data-Methods
-------------------------------------
+----------------------------------------
 
 .. currentmodule:: fRAGme
 
@@ -50,8 +51,27 @@ data-Methods
    api.v1.data.data_delete_pdfs
    api.v1.data.data_delete_databases
 
+auth-Methods
+----------------------------------------------
+
+.. currentmodule:: fRAGme
+
+.. autosummary::
+   :nosignatures:
+   :toctree: generated/
+   :template: class.rst
+
+#   util.v1.auth.fake_users_db
+   util.v1.auth.verify_password
+   util.v1.auth.get_password_hash
+   util.v1.auth.get_user
+   util.v1.auth.authenticate_user
+   util.v1.auth.create_access_token
+   util.v1.auth.get_current_user
+   util.v1.auth.get_current_active_user
+
 chroma_handler-Methods
-------------------------------------
+------------------------------------------------
 
 .. currentmodule:: fRAGme
 
@@ -89,9 +109,10 @@ Modules
 
    models.v1.cmd
    models.v1.data
+   models.v1.auth
 
 cmd-Models
-------------------------------------
+-----------------------------------------
 
 .. currentmodule:: fRAGme
 
@@ -107,7 +128,7 @@ cmd-Models
    models.v1.cmd.CmdAskQuestionResponse
 
 data-Models
-------------------------------------
+----------------------------------------------
 
 .. currentmodule:: fRAGme
 
@@ -134,3 +155,18 @@ data-Models
    models.v1.data.DataDeletePDFsResponse
    models.v1.data.DataDeleteDatabasesRequest
    models.v1.data.DataDeleteDatabasesResponse
+
+auth-Models
+------------------------------------
+
+.. currentmodule:: fRAGme
+
+.. autosummary::
+   :nosignatures:
+   :toctree: generated/
+   :template: class.rst
+
+   models.v1.auth.Token
+   models.v1.auth.TokenData
+   models.v1.auth.User
+   models.v1.auth.UserInDB
