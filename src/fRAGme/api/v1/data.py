@@ -6,7 +6,7 @@ from typing import List, Annotated
 from fastapi import APIRouter, HTTPException, File, UploadFile, Depends
 
 from fRAGme.models.v1.auth import User
-from fRAGme.util.auth import get_current_active_user
+from fRAGme.util.v1.auth import get_current_active_user
 from fRAGme.util.v1.chroma_handler import (
     add_texts,
     add_pdfs,

@@ -9,7 +9,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from openai import OpenAI
 
 from fRAGme.models.v1.auth import User
-from fRAGme.util.auth import get_current_active_user
+from fRAGme.util.v1.auth import get_current_active_user
 from fRAGme.util.v1.chroma_handler import build_question
 from fRAGme.models.v1.cmd import (
     CmdAskQuestionRequest,
