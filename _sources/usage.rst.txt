@@ -12,15 +12,15 @@ Use as package from cli
     $ source venv/bin/activate
     (venv)$ pip install fRAGme
 
-    # Call with variables directly
-    (venv)$ ORIGIN=* OPENAI_API_KEY=YOUR_OPENAI_API_KEY DATA_PATH="./data" uvicorn fRAGme.app:app --host 0.0.0.0 --port 8080
-
     # or set with export globally for all variables
     (venv)$ export ORIGIN=*
     (venv)$ export OPENAI_API_KEY=YOUR_OPENAI_API_KEY
     (venv)$ export DATA_PATH="./data"
     (venv)$ export HOST=0.0.0.0
     (venv)$ export PORT=8080
+    (venv)$ export AUTH=True
+    (venv)$ export SECRET_KEY=YOUR_SECRET
+    (venv)$ export ADMIN_SECRET=YOUR_HASHED_SECRET
     (venv)$ uvicorn fRAGme.app:app --host $HOST --port $PORT
 
 .. image:: _static/images/terminal_webservice_up.png

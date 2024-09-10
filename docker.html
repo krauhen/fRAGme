@@ -110,7 +110,9 @@ docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </sp
 <span class="w">          </span>-e<span class="w"> </span><span class="nv">PORT</span><span class="o">=</span><span class="m">8080</span><span class="w"> </span><span class="se">\</span>
 <span class="w">          </span>-e<span class="w"> </span><span class="nv">HOST</span><span class="o">=</span><span class="m">0</span>.0.0.0<span class="w"> </span><span class="se">\</span>
 <span class="w">          </span>-e<span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">          </span>-e<span class="w"> </span><span class="nv">DATA_PATH</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>-e<span class="w"> </span><span class="nv">AUTH</span><span class="o">=</span>True<span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>-e<span class="w"> </span><span class="nv">SECRET_KEY</span><span class="o">=</span><span class="s2">&quot;YOUR_SECRET&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>-e<span class="w"> </span><span class="nv">ADMIN_SECRET</span><span class="o">=</span><span class="s2">&quot;YOUR_HASHED_SECRET&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">          </span>krauhen/fragme:latest
 </pre></div>
 </div>

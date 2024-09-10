@@ -17,7 +17,9 @@ From dockerhub
               -e PORT=8080 \
               -e HOST=0.0.0.0 \
               -e OPENAI_API_KEY="" \
-              -e DATA_PATH="./data" \
+              -e AUTH=True \
+              -e SECRET_KEY="YOUR_SECRET" \
+              -e ADMIN_SECRET="YOUR_HASHED_SECRET" \
               krauhen/fragme:latest
 
 .. image:: _static/images/terminal_docker_up.png

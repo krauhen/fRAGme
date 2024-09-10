@@ -104,15 +104,15 @@
 $<span class="w"> </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
 <span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>fRAGme
 
-<span class="c1"># Call with variables directly</span>
-<span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span><span class="nv">ORIGIN</span><span class="o">=</span>*<span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span>YOUR_OPENAI_API_KEY<span class="w"> </span><span class="nv">DATA_PATH</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span><span class="w"> </span>uvicorn<span class="w"> </span>fRAGme.app:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span>
-
 <span class="c1"># or set with export globally for all variables</span>
 <span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">ORIGIN</span><span class="o">=</span>*
 <span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span>YOUR_OPENAI_API_KEY
 <span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">DATA_PATH</span><span class="o">=</span><span class="s2">&quot;./data&quot;</span>
 <span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">HOST</span><span class="o">=</span><span class="m">0</span>.0.0.0
 <span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PORT</span><span class="o">=</span><span class="m">8080</span>
+<span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">AUTH</span><span class="o">=</span>True
+<span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">SECRET_KEY</span><span class="o">=</span>YOUR_SECRET
+<span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">ADMIN_SECRET</span><span class="o">=</span>YOUR_HASHED_SECRET
 <span class="o">(</span>venv<span class="o">)</span>$<span class="w"> </span>uvicorn<span class="w"> </span>fRAGme.app:app<span class="w"> </span>--host<span class="w"> </span><span class="nv">$HOST</span><span class="w"> </span>--port<span class="w"> </span><span class="nv">$PORT</span>
 </pre></div>
 </div>

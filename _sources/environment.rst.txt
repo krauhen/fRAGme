@@ -31,3 +31,12 @@ Variables
    * - DATA_PATH
      - ./data
      -
+   * - AUTH
+     - True
+     -
+   * - SECRET_KEY
+     -
+     -
+   * - ADMIN_SECRET
+     -
+     -
