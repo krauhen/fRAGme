@@ -5,17 +5,15 @@ using OpenAI's language model.
 
 from typing import Annotated
 
+import fRAGme
 from fastapi import APIRouter, HTTPException, Depends
-from openai import OpenAI
 
 from fRAGme.models.v1.auth import User
 from fRAGme.util.v1.auth import get_current_active_user
-from fRAGme.util.v1.chroma_handler import build_question
 from fRAGme.models.v1.cmd import (
     CmdAskQuestionRequest,
     CmdAskQuestionResponse,
     ChatAction,
-    RoleEnum,
 )
 
 router = APIRouter()
@@ -38,20 +36,7 @@ def cmd_ask_question(
         HTTPException: Generic internal server error.
     """
     try:
-        prompt = build_question(request.info, request.identifier)
-        client = OpenAI()
-
-        chat_history = [
-            {"role": element.role, "content": element.content}
-            for element in request.info.chat_history
-        ]
-        chat_history.append({"role": RoleEnum.USER, "content": prompt})
-
-        completion = client.chat.completions.create(
-            model="gpt-4o-mini", messages=chat_history
-        )
-
-        answer = completion.choices[0].message
+        answer = fRAGme.ask(request.info, request.identifier)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e)) from e
 

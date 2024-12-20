@@ -43,7 +43,7 @@ class Question(BaseModel):
     """Model representing a question with its context and parameters."""
 
     base_prompt: str = BASE_PROMPT
-    chat_history: List[ChatAction]
+    chat_history: List[ChatAction] = []
     question: str
     k_similar_text_snippets: int = 10
 

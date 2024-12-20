@@ -22,7 +22,7 @@ load_dotenv(verbose=True, override=True)
 # Initialize the FastAPI app
 app = FastAPI(
     title="fRAGme",
-    description="Retrieval Augmented Generation (RAG) Service.",
+    description="Retrieval Augmented Generation (RAG) Service."
 )
 
 # Include the API routers

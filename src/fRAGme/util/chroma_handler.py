@@ -13,8 +13,8 @@ from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_community.document_loaders import PyPDFLoader
 
-from fRAGme.models.v1.cmd import Question
-from fRAGme.models.v1.data import (
+from fRAGme.models.cmd import Question
+from fRAGme.models.data import (
     Text,
     TextUpdate,
 )
@@ -22,13 +22,17 @@ from fRAGme.models.v1.data import (
 vector_stores = {}
 
 
-def create_vector_store(identifier: str) -> Chroma:
+def create_vector_store(identifier: str, api_key: str) -> Chroma:
     """
     Create a vector store for a given identifier.
     """
-    data_path = os.getenv("DATA_PATH")
+    data_path = os.getenv("DATA_PATH", "/tmp")
     filename = os.path.join(data_path, f"{identifier}_chroma_langchain_db")
-    embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
+
+    if not os.path.exists(filename):
+        os.makedirs(filename)
+
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-large", api_key=api_key)
     vector_store = Chroma(
         collection_name=identifier,
         embedding_function=embeddings,
@@ -37,12 +41,12 @@ def create_vector_store(identifier: str) -> Chroma:
     return vector_store
 
 
-def get_vector_store(identifier: str) -> Chroma:
+def get_vector_store(identifier: str, api_key: str) -> Chroma:
     """
     Retrieve the vector store for a given identifier, creating it if necessary.
     """
     if identifier not in vector_stores or vector_stores[identifier] is None:
-        vector_store = create_vector_store(identifier)
+        vector_store = create_vector_store(identifier, api_key)
         vector_stores[identifier] = vector_store
     else:
         vector_store = vector_stores[identifier]
@@ -190,7 +194,7 @@ def delete_databases(identifiers: List[str]):
             shutil.rmtree(filepath)
 
 
-def build_question(data: Question, identifier: str) -> str:
+def build_question(data: Question, identifier: str, api_key: str) -> str:
     """
     Build a question template with snippets from the vector store.
     """
@@ -199,7 +203,7 @@ def build_question(data: Question, identifier: str) -> str:
 
     # Add k snippets
     template += "Info-Snippets:\n"
-    vector_store = get_vector_store(identifier)
+    vector_store = get_vector_store(identifier, api_key)
     snippets = vector_store.similarity_search(
         data.question, k=data.k_similar_text_snippets
     )
